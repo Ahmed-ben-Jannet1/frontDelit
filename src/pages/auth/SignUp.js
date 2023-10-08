@@ -27,7 +27,7 @@ function SignUp() {
       dispatch(
         alertActions.SET_ALERT({
           id: idd,
-          msg: error.message,
+          msg: "Please enter a valid email address and ensure your password is at least 5 characters long ",
           type: "danger",
         })
       );
@@ -107,6 +107,7 @@ function SignUp() {
                   onChange={(e) => onChange(e)}
                 />
               </div>
+              <p className="note">* Please enter a valid email address </p>
               <div className="flex-row">
                 <label className="lf--label" for="password">
                   <svg x="0px" y="0px" width="15px" height="5px">
@@ -128,6 +129,9 @@ function SignUp() {
                   onChange={(e) => onChange(e)}
                 />
               </div>
+              <p className="note">
+                * Password must be at least 6 characters long{" "}
+              </p>
               <input className="lf--submit" type="submit" value="SIGN UP" />
             </form>
             <Link to="/signIn">

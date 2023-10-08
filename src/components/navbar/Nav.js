@@ -100,7 +100,7 @@ function Navbar() {
               <span className="fas fa-bars"></span>
             </button>
           </div>
-          {isAuth ? authLinks : notAuthLinks}
+          {isAuth && data ? authLinks : notAuthLinks}
         </nav>
       </div>
     </>

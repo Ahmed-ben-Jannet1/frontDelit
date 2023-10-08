@@ -88,6 +88,11 @@ $headings-font: "Dancing Script", cursive;
   }
 }
 
+.btn {
+  font-family: $headings-font;
+  color: midnightblue;
+}
+
 .lf--textarea {
   flex: 1;
   padding: 1em;

@@ -31,7 +31,7 @@ function MyList() {
       dispatch(
         alertActions.SET_ALERT({
           id: idd,
-          msg: error.message,
+          msg: " Title must be at least 6 characters long",
           type: "danger",
         })
       );
@@ -48,7 +48,7 @@ function MyList() {
       dispatch(
         alertActions.SET_ALERT({
           id: idd,
-          msg: error.message,
+          msg: " Title must be at least 6 characters long",
           type: "danger",
         })
       );

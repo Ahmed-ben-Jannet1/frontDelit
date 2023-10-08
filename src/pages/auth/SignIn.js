@@ -31,7 +31,7 @@ function SignIn() {
       dispatch(
         alertActions.SET_ALERT({
           id: idd,
-          msg: error.message,
+          msg: "Bad Credentials : you have entered either the Username and/or Password incorrectly ",
           type: "danger",
         })
       );
