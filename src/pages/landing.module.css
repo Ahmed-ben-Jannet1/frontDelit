@@ -1,0 +1,11 @@
+.video {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  z-index: -1;
+}
+.video::-webkit-media-controls {
+  display: none !important;
+}

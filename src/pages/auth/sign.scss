@@ -1,0 +1,141 @@
+$green-dark: #51da51;
+$green-light: #c8f1ae;
+$gray: #8f8f8f;
+$gray-light: #f5f6f8;
+$color-neutral-med: #8b4513;
+$headings-font: "Dancing Script", cursive;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  font-size: 2em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    // Noise effect
+    opacity: 0.3;
+  }
+}
+
+.login-form {
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: rgba(black, 0.15);
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+
+    background: linear-gradient(to right, $green-dark, $green-light);
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+    max-width: 15em;
+  }
+}
+
+.flex-row {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.lf--label {
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-10deg); // Adjust the degree to match the parent's skew
+  font-family: $headings-font;
+
+  background: $gray-light;
+  cursor: pointer;
+}
+.lf--input {
+  flex: 1;
+  padding: 1em;
+  border: 0;
+  color: $color-neutral-med;
+  font-size: 1rem;
+  transform: skew(-10deg); // Adjust the degree to match the parent's skew
+  font-family: $headings-font;
+
+  &:focus {
+    outline: none;
+    transition: transform 0.15s ease;
+    transform: scale(1.1);
+  }
+}
+
+.lf--textarea {
+  flex: 1;
+  padding: 1em;
+  border: 0;
+  height: 15vh;
+  color: $color-neutral-med;
+  font-size: 1rem;
+  transform: skew(-10deg); // Adjust the degree to match the parent's skew
+  font-family: $headings-font;
+
+  &:focus {
+    outline: none;
+    transition: transform 0.15s ease;
+    transform: scale(1.1);
+  }
+}
+
+.lf--submit {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  font-family: $headings-font;
+
+  background: linear-gradient(to right, $green-dark, $green-light);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(black, 0.2);
+
+  transform: skew(-10deg); // Adjust the degree to match the parent's skew
+
+  &:focus {
+    outline: none;
+    transition: transform 0.15s ease;
+    transform: scale(1.1);
+  }
+}
+
+.lf--forgot {
+  margin-top: 1em;
+  color: $green-light;
+  font-size: 0.65em;
+  text-align: center;
+  position: relative;
+}
+
+::placeholder {
+  color: $color-neutral-med;
+}

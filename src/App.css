@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+:root {
+  --light-color: #8b4513;
+  --danger-color: #ffc0cb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-size: 1.6rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../src/utils/background.png");
+}
+
+.model {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  z-index: 8999;
+}
+.model-op {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  z-index: 8999;
+  position: absolute;
+}
+
+.pagination-container > ul {
+  display: flex !important; /* Display list items horizontally */
+}
+
+.pagination-component > ul {
+  display: flex !important; /* Display list items horizontally */
+}
+
+/* FOR ALL popups */
+.popup {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+  width: 50%;
+  font-size: 2em;
+}
+
+/* Alert system */
+
+.popupalert {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Set a higher z-index to make the popup appear above everything */
+  width: 40rem;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 1.5em;
   color: white;
+  text-align: center;
+  font-size: 21px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
-.App-link {
-  color: #61dafb;
+.alert {
+  margin-bottom: 10px;
+  padding: 1em;
+  border-radius: 5px;
+  opacity: 0.9;
+  background: black;
+  color: white;
+  z-index: 9999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alert-danger {
+  background: var(--danger-color);
+  color: var(--light-color);
 }
